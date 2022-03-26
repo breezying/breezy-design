@@ -1,9 +1,9 @@
 {
-  "name": "breeze-design",
-  "version": "0.0.4",
+  "name": "breezy-design",
+  "version": "0.0.1",
   "description": "基于 Vue 的按钮",
-  "title": "Breeze Design",
-  "main": "lib/breeze-ui.common.js",
+  "title": "Breezy Design",
+  "main": "lib/breezy-design.common.js",
   "private": false,
   "keywords": ["vue", "button"],
   "author": "Jing.an",

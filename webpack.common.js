@@ -10,10 +10,10 @@ module.exports = {
   output: {
     path: path.resolve(process.cwd(), './lib'),
     // publicPath: '/',
-    filename: 'breeze-ui.common.js',
+    filename: 'breezy-design.common.js',
     chunkFilename: '[id].js',
     libraryExport: 'default',
-    library: 'BREEZE',
+    library: 'BREEZY',
     libraryTarget: 'commonjs2'
   },
   devServer: {
