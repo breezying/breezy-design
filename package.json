@@ -1,18 +1,18 @@
 {
   "name": "breeze-design",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "基于 Vue 的按钮",
   "title": "Breeze Design",
-  "main": "lib/element-ui.common.js",
+  "main": "lib/breeze-ui.common.js",
   "private": false,
   "keywords": ["vue", "button"],
   "author": "Jing.an",
   "license": "ISC",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build:common": "webpack --config webpack.common.js",
     "build": "webpack --config webpack.config.js",
-    "start": "webpack serve --open",
-    "lib": "webpack --config webpack.config.js"
+    "serve": "webpack serve --open"
   },
   "dependencies": {
     "lodash": "^4.17.21"

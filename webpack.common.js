@@ -5,15 +5,20 @@ const TerserPlugin = require('terser-webpack-plugin');
 module.exports = {
   mode: 'production',
   entry: {
-    app: ['./src/main.js']
+    app: ['./packages/index.js']
   },
   output: {
-    path: path.resolve(process.cwd(), './dist'),
-    filename: 'main.js'
+    path: path.resolve(process.cwd(), './lib'),
+    // publicPath: '/',
+    filename: 'breeze-ui.common.js',
+    chunkFilename: '[id].js',
+    libraryExport: 'default',
+    library: 'BREEZE',
+    libraryTarget: 'commonjs2'
   },
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.join(__dirname, 'lib'),
     },
     compress: true,
     port: 9000,
