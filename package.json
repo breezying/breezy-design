@@ -1,16 +1,19 @@
 {
-  "name": "breeze-ui",
+  "name": "breeze-design",
   "version": "0.0.1",
-  "description": "@breeze-ui",
-  "private": true,
+  "description": "基于 Vue 的按钮",
+  "title": "Breeze Design",
+  "main": "lib/element-ui.common.js",
+  "private": false,
+  "keywords": ["vue", "button"],
+  "author": "Jing.an",
+  "license": "ISC",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js",
-    "start": "webpack serve --open"
+    "start": "webpack serve --open",
+    "lib": "webpack --config webpack.config.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.21"
   },
@@ -24,5 +27,24 @@
     "webpack": "^5.70.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
-  }
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }
