@@ -1,41 +1,34 @@
 const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   mode: 'production',
   entry: {
-    app: ['./packages/index.js']
+    app: ['./examples/entry.js']
   },
   output: {
-    path: path.resolve(process.cwd(), './lib'),
-    // publicPath: '/',
-    filename: 'breezy-design.common.js',
-    chunkFilename: '[id].js',
-    libraryExport: 'default',
-    library: 'BREEZY',
-    libraryTarget: 'commonjs2'
+    path: path.resolve(process.cwd(), './examples'),
+    // filename: 'main.js',
+    filename: '[name].[hash:7].js',
+    chunkFilename: '[name].[hash:7].js'
   },
   devServer: {
-    static: {
-      directory: path.join(__dirname, 'lib'),
-    },
-    compress: true,
-    port: 9000,
+    port: 9010
   },
   performance: {
     hints: false
-    // hints: 'warning',
-    // maxAssetSize: 1000,
-    // maxEntrypointSize: 4000,
-    // assetFilter: function (assetFilename) {
-    //   return assetFilename.endsWith('.js');
-    // },
   },
   optimization: {
     minimize: false
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      template: './examples/index.tpl',
+      filename: './index.html',
+      // favicon: './examples/favicon.ico'
+    }),
     new VueLoaderPlugin()
   ],
   module: {

@@ -1,23 +1,31 @@
 {
   "name": "breezy-design",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "基于 Vue 的按钮",
   "title": "Breezy Design",
   "main": "lib/breezy-design.common.js",
   "private": false,
-  "keywords": ["vue", "button"],
+  "keywords": [
+    "vue",
+    "button"
+  ],
   "author": "Jing.an",
   "license": "ISC",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:common": "webpack --config webpack.common.js",
-    "build": "webpack --config webpack.config.js",
-    "serve": "webpack serve --open"
+    "build:common": "webpack --config build/webpack.common.js",
+    "build": "webpack --config build/webpack.config.js",
+    "serve": "webpack serve --open",
+    "serve:test": "webpack-dev-server --config build/webpack.config.js",
+    "serve:demo": "webpack-dev-server --config build/webpack.demo.js"
   },
   "dependencies": {
+    "element-ui": "^2.15.6",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "babel-plugin-component": "^1.1.1",
+    "html-webpack-plugin": "^5.5.0",
     "node-sass": "^7.0.1",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",

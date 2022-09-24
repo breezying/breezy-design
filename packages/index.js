@@ -1,16 +1,19 @@
 /*
  * @Author: your name
  * @Date: 2022-01-14 00:06:55
- * @LastEditTime: 2022-01-14 00:08:59
+ * @LastEditTime: 2022-09-24 19:49:29
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue_project/Users/jing/Office/Project/vue_demo/packages/index.js
  */
 
-import ComColorButton from './comColorButton'
+import ColorButton from './color-button'
+import ScaleBox from './scale-box'
+
 // 存储组件列表
 const components = [
-  ComColorButton
+  ColorButton,
+  ScaleBox
 ] 
 /* 
   定义install 方法，接收Vue作为参数，如果使用use注册插件，则所有的组件都将被注册
@@ -29,6 +32,7 @@ if(typeof window !== 'undefined' && window.Vue){
 }
 export default{
   install,
-  ComColorButton
+  ColorButton,
+  ScaleBox
 }
 
