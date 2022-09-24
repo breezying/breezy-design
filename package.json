@@ -1,9 +1,13 @@
 {
   "name": "breezy-design",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "基于 Vue 的按钮",
   "title": "Breezy Design",
   "main": "lib/breezy-design.common.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:breezying/breezy-design.git"
+  },
   "private": false,
   "keywords": [
     "vue",
