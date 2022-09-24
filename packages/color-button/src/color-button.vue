@@ -1,12 +1,3 @@
-<!--
- * @Author: your name
- * @Date: 2022-01-14 00:08:07
- * @LastEditTime: 2022-01-21 00:41:00
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: /vue_project/Users/jing/Office/Project/vue_demo/packages/comColorButton/src/color-button.vue
--->
-
 <!-- color-button.vue -->
 <template>
   <span class="color-button">
@@ -18,7 +9,7 @@
 
 <script>
 export default {
-  name:'ComColorButton',
+  name:'ColorButton',
   props:{
       type:{
       type:String,
